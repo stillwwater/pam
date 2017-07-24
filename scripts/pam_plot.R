@@ -2,7 +2,7 @@ library(ggplot2)
 library(reshape2)
 
 csv_file <- "Data\\pam_data.csv"
-output   <- "Plots\\hplot.png"
+output   <- "Plots\\pam_plot.png"
 
 if (!file.exists(csv_file)) {
   stop(paste("No data to plot,", csv_file, "does not exist."))
