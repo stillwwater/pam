@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PAM.Setup.Views.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PAM.Setup.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="404" d:DesignWidth="607">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="172" />
+            <RowDefinition Height="44" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="../Logo/PAM_192x.png" Height="192" />
+
+        <TextBlock Grid.Row="1"
+                   Text="PAM Setup Utility"
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   VerticalAlignment="Center"
+                   FontFamily="Segoe UI"
+                   FontWeight="SemiBold"
+                   Foreground="#FF616161" />
+
+        <TextBlock Grid.Row="2"
+                   TextWrapping="Wrap"
+                   HorizontalAlignment="Center"
+                   Text="{Binding Strings.HomeDescription}" />
+    </Grid>
+</UserControl>

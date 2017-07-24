@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="PAM.UI.Views.Editor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PAM.UI.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="557" d:DesignWidth="740">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="150" MaxWidth="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Content="Save"
+                Grid.Column="1"
+                Command="{Binding SaveFileCommand}"
+                Width="82"
+                HorizontalAlignment="Left"
+                Height="24" />
+
+        <ListBox ItemsSource="{Binding Files}"
+                 Grid.Row="1"
+                 Margin="0,0,5,0"
+                 ScrollViewer.CanContentScroll="True"
+                 SelectedItem="{Binding SelectedFile}" />
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="1"
+                 FontFamily="{Binding UserSettings.EditorFontFamily}"
+                 FontSize="{Binding UserSettings.EditorFontSize}"
+                 Text="{Binding EditorText, UpdateSourceTrigger=PropertyChanged}"
+                 TextWrapping="{Binding UserSettings.EditorTextWrap}"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 AcceptsReturn="True"
+                 AcceptsTab="True" />
+    </Grid>
+
+    <Control.InputBindings>
+        <KeyBinding Key="S" Modifiers="Ctrl" Command="{Binding SaveFileCommand}" />
+    </Control.InputBindings>
+</UserControl>

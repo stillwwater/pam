@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="PAM.Setup.Views.OtherSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:PAM.Setup.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="404" d:DesignWidth="607">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Editor font family"
+                   Style="{DynamicResource SubHeader}"
+                   Margin="0,0,0,10" />
+
+            <TextBlock Text="Theme"
+                   Style="{DynamicResource SubHeader}"
+                   Margin="0,0,0,10" />
+
+            <TextBlock Text="Night mode"
+                   Style="{DynamicResource SubHeader}"
+                   Margin="0,0,0,10" />
+
+            <TextBlock Text="Create Desktop shortcut"
+                   Style="{DynamicResource SubHeader}"
+                   Margin="0,0,0,10" />
+
+            <TextBlock Text="Launch pam.exe"
+                   Style="{DynamicResource SubHeader}"
+                   Margin="0,0,0,10" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBox Height="24"
+                     Width="140"
+                     HorizontalAlignment="Left"
+                     FontFamily="{Binding EditorFontFamily}"
+                     Text="{Binding EditorFontFamily}"
+                     Margin="0,0,0,10" />
+
+            <ComboBox Width="140"
+                  HorizontalAlignment="Left"
+                  Height="24"
+                  SelectedItem="{Binding SelectedThemeAccent}"
+                  ItemsSource="{Binding ThemeAccents}"
+                  Margin="0,0,0,10" />
+
+            <CheckBox Height="24"
+                  HorizontalAlignment="Left"
+                  IsChecked="{Binding EnableDarkTheme}"
+                  Margin="0,0,0,10" />
+
+            <CheckBox Height="24"
+                  IsChecked="{Binding CreateDesktopShortcut}"
+                  Margin="0,0,0,10" />
+
+            <CheckBox Height="24"
+                  IsChecked="{Binding LaunchPAM}"
+                  Margin="0,0,0,10" />
+        </StackPanel>
+    </Grid>
+</UserControl>

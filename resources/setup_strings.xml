@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<HomeDescription>The setup will guide you through configuring PAM.
+Settings can be altered at any time within PAM in the "Editor" tab or by running this setup.
+</HomeDescription>
+
+<ActivitiesDescription>Activities are groups of one or more applications that PAM tracks.
+For example, a "Design" activity could contain "illustrator.exe" and "photoshop.exe"; "Programming" would contain your text editors and IDEs and a "Gaming" activity would contain your game launchers.
+</ActivitiesDescription>
+
+<QueryingDescription>PAM queries your system every 'n' seconds, using WMI (Windows Management System), to check when an application defined in your Activities starts or finishes executing. By default PAM queries the system every half minute, this means it can take up to 30 seconds for a change to be detected.
+
+It is important to note that lower the delay between queries, the more often WMI will use CPU time.
+</QueryingDescription>
+
+<InterpretersDescription>An optional feature is to have the saved data graphed by an external application and displayed within PAM in the "Plots" tab. This allows you to plot the data however you like and using whatever tools you like... It also saves the developer time.
+
+PAM already comes with a few R scripts, so if you have the R interpreter installed on your machine, this feature will work out of the box.
+
+</InterpretersDescription>
+</Strings>
