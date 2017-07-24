@@ -17,7 +17,7 @@ The data collected can be used for your own data visualization purposes, PAM can
 
 ## Installation
 
-* Download the binaries or compile from source (run build.cmd)
+* [Download the binaries](https://github.com/stillwwater/pam/releases) or compile from source (run build.cmd)
 * Unpack the compressed archive
 * Run `pam.exe` (the setup tool will start automatically if PAM is not configured)
 
